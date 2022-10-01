@@ -1,3 +1,39 @@
+1. JAVASCRIPT- settimeout: function for the timer
+2. static HTML for inital page
+3. start button -( click event )✅
+4. multiple choice - buttons for each choice (click event), add hover to these buttons
+5. +- time based on answer choice✅
+if choice = correct , timer = timer + 10✅
+if choice = incorrect , timer = timer - 10✅
+6. increment or decrement✅
+7. local storage - .js
+8. once quiz is finished, final page in html inside js : score and initials
+9. 1 html file with changes made to html file within js
+10. QUESTIONS, CHOICES, ANSWER TO BE TAKEN FROM ARRAY OF OBJECTS, MANIPULATE THE DOM ACCORDINGLY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Quiz-Challenge
 
 # 04 Web APIs: Code Quiz

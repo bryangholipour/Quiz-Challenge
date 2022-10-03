@@ -27,7 +27,6 @@ button:hover{
 }
 
 .card {
-    display: block;
     background-color:	#240291;
     border: 1px solid #eceff1;
     border-radius: 8px;
@@ -36,6 +35,15 @@ button:hover{
     margin: 60px auto;
     padding: 20px;
     width: 80vw;
+  }
+
+  .show{
+    display: block;
+
+  }
+  .hide{
+    display:none !important;
+
   }
 
   h1, h2{

@@ -11,8 +11,17 @@ var scoreBtn = document.querySelector("#save2")
 var isPlaying = false;
 var rightAnswer = document.querySelector("#correct");
 var wrongAnswer = document.querySelector("#incorrect");
-var secondsLeft = 20;
-let next_button =document.getElementById("next_Question")
+var rightAnswer2 = document.querySelector("#correct2");
+var wrongAnswer2 = document.querySelector("#incorrect2");
+var rightAnswer3 = document.querySelector("#correct3");
+var wrongAnswer3 = document.querySelector("#incorrect3");
+var rightAnswer4 = document.querySelector("#correct4");
+var wrongAnswer4 = document.querySelector("#incorrect4");
+var rightAnswer5 = document.querySelector("#correct5");
+var wrongAnswer5 = document.querySelector("#incorrect5");
+var secondsLeft = 56;
+var timeEl = document.querySelector(".time");
+// let next_button =document.getElementById("next_Question")
 function setTime() {
     // Sets interval in variable
     var timerInterval = setInterval(function() {
@@ -22,6 +31,7 @@ function setTime() {
       if(secondsLeft === 0) {
           clearInterval(timerInterval);
           console.log("you lose!");
+          timeEl.textContent = "YOU LOST :("
         // Stops execution of action at set interval
        
         // Calls function to create and append image
@@ -30,89 +40,149 @@ function setTime() {
   
     }, 1000);
   }
+//   for (let i = 0; i < rightAnswer.length; i++) {
+//     text += rightAnswer[i];
+//   }
+//   for (let i = 0; i < wrongAnswer.length; i++) {
+//     text += wrongAnswer[i];
+//   }
 
 startBtn.addEventListener("click", function () {
     console.log("game started!");
     setTime();
     populate_questions();
+    startBtn.style.display = 'none';
 })
-
+// scoreBtn.addEventListener("click", function(){
+//     populate_highscore();
+//     startBtn.style.display = 'none';
+// })
 let question_number = 1
-
 function populate_questions(){
 let initial_page = document.getElementById("initial_page")
 initial_page.setAttribute("class" , "show")
 let current_question = document.getElementById(`question_${question_number}`)
 current_question.setAttribute("class" , `card show`)
-// let button_div=document.createElement("button")
-// button_div.innerHTML="next"
---rightAnswer.addEventListener("click" , function(e){
+rightAnswer.addEventListener("click" , function(e){
     e.preventDefault()
-    console.log("next_button")
-    console.log("question_number")
     document.getElementById(`question_${question_number}`).setAttribute("class" , "card hide")
     question_number++
     populate_questions()
 })
-current_question.append(button_div)
+current_question.append(+1)
 }
+rightAnswer2.addEventListener("click" , function(e){
+    e.preventDefault()
+    document.getElementById(`question_${question_number}`).setAttribute("class" , "card hide")
+    question_number++
+    populate_questions()
+})
+rightAnswer3.addEventListener("click" , function(e){
+    e.preventDefault()
+    document.getElementById(`question_${question_number}`).setAttribute("class" , "card hide")
+    question_number++
+    populate_questions()
+})
+rightAnswer4.addEventListener("click" , function(e){
+    e.preventDefault()
+    document.getElementById(`question_${question_number}`).setAttribute("class" , "card hide")
+    question_number++
+    populate_questions()
+})
+rightAnswer5.addEventListener("click" , function(e){
+    e.preventDefault()
+    document.getElementById(`question_${question_number}`).setAttribute("class" , "card hide")
+    question_number++
+    populate_questions()
+
+})
 scoreBtn.addEventListener("click", function(){
     console.log("go to highscore page");
 })
 
 
 
-rightAnswer.addEventListener("click", function (){
+ rightAnswer.addEventListener("click", function (){
     console.log("correct");
-    secondsLeft = (secondsLeft + 10)
+    secondsLeft = (secondsLeft + 5)
+   
 })
 
 wrongAnswer.addEventListener("click", function(){
     console.log("incorrect");
-    secondsLeft = (secondsLeft - 10)
+    secondsLeft = (secondsLeft - 5)
 })
-// Selects element by class
-var timeEl = document.querySelector(".time");
 
-// Selects element by id
-var mainEl = document.getElementById("main");
+rightAnswer2.addEventListener("click", function (){
+    console.log("correct2");
+    secondsLeft = (secondsLeft + 5)
+   
+})
+
+wrongAnswer2.addEventListener("click", function(){
+    console.log("incorrect2");
+    secondsLeft = (secondsLeft - 5)
+})
+
+rightAnswer3.addEventListener("click", function (){
+    console.log("correct3");
+    secondsLeft = (secondsLeft + 5)
+   
+})
+
+wrongAnswer3.addEventListener("click", function(){
+    console.log("incorrect3");
+    secondsLeft = (secondsLeft - 5)
+})
+
+rightAnswer4.addEventListener("click", function (){
+    console.log("correct4");
+    secondsLeft = (secondsLeft + 5)
+   
+})
+
+wrongAnswer4.addEventListener("click", function(){
+    console.log("incorrect4");
+    secondsLeft = (secondsLeft - 5)
+})
+
+rightAnswer5.addEventListener("click", function (){
+    console.log("correct5");
+    secondsLeft = (secondsLeft + 5)
+   
+})
+
+wrongAnswer5.addEventListener("click", function(){
+    console.log("incorrect5");
+    secondsLeft = (secondsLeft - 5)
+})
 
 
 
 
 
 if(rightAnswer === true){
-    secondsLeft = (secondsLeft + 10)
+    secondsLeft = (secondsLeft + 5)
 }   else{
-    secondsLeft = (secondsLeft - 10)
-
-   
+    secondsLeft = (secondsLeft - 5)
 }
-    
-  
-// let questions = [{
-//     question: "1. Lady Gaga starred in a 2020 biopic about this famous italian fashion house", 
-//     choices: ["DIOR","PRADA","GUCCI","BALENCIAGA"],
-//     answer: "GUCCI"
-// },{
-//     question: "2. Some of this director's projects include: Blue velvet, Dune (the 1980's one), Eraserhead, and Inland Empire", 
-//     choices: ["DAVID LYNCH","CHRISTOPHER NOLAN","WES CRAVEN","WES ANDERSON"],
-//     answer: "A DAVID LYNCH"
-// },{
-//     question: "3. Which award show hands out awards for BOTH movies and TV",
-//     choices: ["THE GRAMMYS", "THE GOLDEN GLOBES", "THE ACADEMY AWARDS", "THE TONYS"],
-//     answer: "THE GOLDEN GLOBES"
-// },{
-//     question: "4. This actor is famous for his 'method acting' in which he doesnt break character for the duration of filming",
-//     choices: ["THE ROCK", "DANIEL DAY-LEWIS", "JEREMY RENNER", "TOM CRUISE"],
-//     answer: "DANIEL DAY-LEWIS"
-// },{
-//     question: "5. Which network carries the shows Industry, Succession, Barry, and Westworld",
-//     choices: ["HBO", "NETFLIX", "SHOWTIME", "LIFETIME"],
-//     answer: "HBO"
-// }]
-
-
-
-
-
+if(rightAnswer2 === true){
+    secondsLeft = (secondsLeft + 5)
+}   else{
+    secondsLeft = (secondsLeft - 5)
+}    
+if(rightAnswer3 === true){
+    secondsLeft = (secondsLeft + 5)
+}   else{
+    secondsLeft = (secondsLeft - 5)
+}    
+if(rightAnswer4 === true){
+    secondsLeft = (secondsLeft + 5)
+}   else{
+    secondsLeft = (secondsLeft - 5)
+}  
+if(rightAnswer5 === true){
+    secondsLeft = (secondsLeft + 5)
+}   else{
+    secondsLeft = (secondsLeft - 5)
+}       

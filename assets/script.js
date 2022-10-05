@@ -78,7 +78,6 @@ rightAnswer5.addEventListener("click" , function(e){
 rightAnswer.addEventListener("click", function (){
     console.log("correct");
     secondsLeft = (secondsLeft + 5)
-   
 })
 wrongAnswer.addEventListener("click", function(){
     console.log("incorrect");
@@ -86,8 +85,7 @@ wrongAnswer.addEventListener("click", function(){
 })
 rightAnswer2.addEventListener("click", function (){
     console.log("correct2");
-    secondsLeft = (secondsLeft + 5)
-   
+    secondsLeft = (secondsLeft + 5)  
 })
 wrongAnswer2.addEventListener("click", function(){
     console.log("incorrect2");
@@ -95,8 +93,7 @@ wrongAnswer2.addEventListener("click", function(){
 })
 rightAnswer3.addEventListener("click", function (){
     console.log("correct3");
-    secondsLeft = (secondsLeft + 5)
-   
+    secondsLeft = (secondsLeft + 5) 
 })
 wrongAnswer3.addEventListener("click", function(){
     console.log("incorrect3");
@@ -104,8 +101,7 @@ wrongAnswer3.addEventListener("click", function(){
 })
 rightAnswer4.addEventListener("click", function (){
     console.log("correct4");
-    secondsLeft = (secondsLeft + 5)
-   
+    secondsLeft = (secondsLeft + 5) 
 })
 wrongAnswer4.addEventListener("click", function(){
     console.log("incorrect4");
@@ -113,8 +109,7 @@ wrongAnswer4.addEventListener("click", function(){
 })
 rightAnswer5.addEventListener("click", function (){
     console.log("correct5");
-    secondsLeft = (secondsLeft + 5)
-   
+    secondsLeft = (secondsLeft + 5)  
 })
 wrongAnswer5.addEventListener("click", function(){
     console.log("incorrect5");
@@ -146,3 +141,4 @@ if(rightAnswer5 === true){
 }   else{
     secondsLeft = (secondsLeft - 5)
 }       
+console.log(".time")
